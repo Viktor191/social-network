@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import audi from './audi-rs3lms.jpg';
 import './App.css';
-import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
-import Profile from "./Components/Profile";
+import Header from "./Components/Header/Header";
+import Navbar from "./Components/Navbar/Navbar";
+import Profile from "./Components/Profile/Profile";
+import Dialogs from "./Components/Dialogs/Dialogs";
+import classes from "./Components/Dialogs/Dialogs.module.css";
 
 
 const App = () => {
@@ -11,7 +11,10 @@ const App = () => {
     <div className='app-wrapper'>
         <Header />
         <Navbar />
-        <Profile />
+        {/*<Profile />*/}
+        <div className='app-wrapper-content'>
+            <Dialogs />
+        </div>
     </div>
   );
 }
