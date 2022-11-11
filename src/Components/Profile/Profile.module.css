@@ -1,14 +1,7 @@
-.content {
-    grid-area: c;
-    background-color: gainsboro;
-}
 .mainImage img {
     max-width: 100%;
     max-height: 300px;
 }
 .avatar img {
     max-height: 60px;
-}
-.item {
-    color: red;
 }
