@@ -1,3 +1,19 @@
 .content {
     background-color: gainsboro;
 }
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialogItems {
+    padding: 10px;
+}
+.dialogItems .active {
+    color: greenyellow;
+}
+.messages {
+    padding: 10px;
+}
+.message {
+
+}
