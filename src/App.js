@@ -19,7 +19,7 @@ const App = () => {
                 <div className='app-wrapper-content'>
                     <Routes>
                         <Route path="/profile" element={<Profile/>}/>
-                        <Route path="/dialogs" element={<Dialogs/>}/>
+                        <Route path="/dialogs/*" element={<Dialogs/>}/> {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
                         <Route path="/settings" element={<Settings/>}/>
