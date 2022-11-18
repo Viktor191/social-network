@@ -24,8 +24,8 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Routes>
                         {/*<Route path="/dialogs" element={<Dialogs dialogs={dialogs} messages={messages}/>} />*/}
-                        <Route path="/profile" element={<Profile posts={props.posts}/>}/>
-                        <Route path="/dialogs/*" element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
+                        <Route path="/profile" element={<Profile posts={props.appState.posts}/>}/>
+                        <Route path="/dialogs/*" element={<Dialogs dialogs={props.appState.dialogs} messages={props.appState.messages}/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
                         <Route path="/settings" element={<Settings/>}/>
