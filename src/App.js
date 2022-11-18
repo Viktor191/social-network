@@ -10,7 +10,12 @@ import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 
 
-const App = () => {
+const App = (props) => {
+    /*let posts = [
+        {id:1, message:'Hi, how are you?', like:41},
+        {id:2, message:'It is my first post', like:8},
+        {id:3, message:'Test post', like:14},
+    ]*/
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
@@ -18,8 +23,9 @@ const App = () => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path="/profile" element={<Profile/>}/>
-                        <Route path="/dialogs/*" element={<Dialogs/>}/> {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
+                        {/*<Route path="/dialogs" element={<Dialogs dialogs={dialogs} messages={messages}/>} />*/}
+                        <Route path="/profile" element={<Profile posts={props.posts}/>}/>
+                        <Route path="/dialogs/*" element={<Dialogs/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
                         <Route path="/settings" element={<Settings/>}/>

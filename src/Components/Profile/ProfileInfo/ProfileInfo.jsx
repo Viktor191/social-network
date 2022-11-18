@@ -1,6 +1,6 @@
 import classes from './ProfileInfo.module.css';
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div className={classes.descriptionBlok}>
             <div className={classes.avatar}>
