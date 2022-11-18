@@ -11,11 +11,6 @@ import Settings from "./Components/Settings/Settings";
 
 
 const App = (props) => {
-    /*let posts = [
-        {id:1, message:'Hi, how are you?', like:41},
-        {id:2, message:'It is my first post', like:8},
-        {id:3, message:'Test post', like:14},
-    ]*/
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
@@ -23,9 +18,8 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        {/*<Route path="/dialogs" element={<Dialogs dialogs={dialogs} messages={messages}/>} />*/}
-                        <Route path="/profile" element={<Profile posts={props.appState.posts}/>}/>
-                        <Route path="/dialogs/*" element={<Dialogs dialogs={props.appState.dialogs} messages={props.appState.messages}/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
+                        <Route path="/profile" element={<Profile posts={props.state.profilePage.posts}/>}/>
+                        <Route path="/dialogs/*" element={<Dialogs dialogs={props.state.dialogPage.dialogs} messages={props.state.dialogPage.messages}/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
                         <Route path="/settings" element={<Settings/>}/>
