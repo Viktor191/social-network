@@ -9,6 +9,7 @@ import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import Friends from "./Components/Friends/Friends";
+import {updateNewPostText} from "./redux/state";
 
 
 
@@ -20,7 +21,7 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path="/profile" element={<Profile state={props.state.profilePage} addPost={props.addPost}/>}/>
+                        <Route path="/profile" element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>}/>
                         <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogPage}/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
