@@ -22,7 +22,7 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Routes>
                         <Route path="/profile" element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}/>
-                        <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogPage}/>}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
+                        <Route path="/dialogs/*" element={<Dialogs store={props.store} />}/>  {/*если есть ссылки глубже, несколько уровней то нужно добьавить "/*"*/}
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
                         <Route path="/settings" element={<Settings/>}/>
