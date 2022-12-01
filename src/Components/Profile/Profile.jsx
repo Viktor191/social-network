@@ -11,7 +11,9 @@ const Profile = (props) => {
                 <img src='https://car-images.bauersecure.com/wp-images/2709/04-audi-rs3lms.jpg'/>
             </div>
             <ProfileInfo/>
-            <MyPosts posts={props.profilePage.posts} addPost={props.addPost} newPostText={props.profilePage.newPostText} updateNewPostText={props.updateNewPostText}/>
+            <MyPosts posts={props.profilePage.posts}
+                     newPostText={props.profilePage.newPostText}
+                     dispatch={props.dispatch}/>
         </div>
     )
 }
